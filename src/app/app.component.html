@@ -1,0 +1,45 @@
+<body >
+<div [ngStyle]="{
+                  'background': config.fondo,
+                  'padding': '5px',
+                  'margin': '20px auto',
+                  'border': '2px solid',
+                  'border-color': config.color
+
+
+
+                  }" >
+
+
+<h1>{{title}}</h1>
+<p>{{subtitulo}}</p>
+
+
+
+  <nav>
+    <a [routerLink]="['/home']" [routerLinkActive]="['active']">Home</a>
+      &nbsp;
+    <a [routerLink]="['/zapatillas']" [routerLinkActive]="['active']">Zapatillas</a>
+      &nbsp;
+    <a [routerLink]="['/cursos']" [routerLinkActive]="['active']">Cursos</a>
+      &nbsp;
+    <a [routerLink]="['/videojuego']" [routerLinkActive]="['active']">Videojuego</a>
+
+
+  </nav>
+  <hr>
+<!--
+<button (click)="ocultar(false)" *ngIf="mostrar" >Ocultar</button>
+<button (click)="ocultar(true)" *ngIf="!mostrar" >Mostrar</button>
+
+
+<videojuego *ngIf="mostrar"></videojuego>
+<zapatillas></zapatillas>
+<cursos></cursos>
+-->
+
+<!-- <zapatillas></zapatillas> -->
+<router-outlet></router-outlet>
+ </div>
+
+ </body>

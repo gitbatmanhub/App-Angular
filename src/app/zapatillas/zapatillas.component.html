@@ -1,0 +1,78 @@
+<h2>{{titulo}}</h2>
+<p> Añadir marca</p>
+
+<p>
+<input type="text" placeholder="ingresa la marca" [(ngModel)]= "mi_marca" (keyup.enter)="mostrarPalabra()"/>
+  <button (click)="getMarca()">Mostrar Marca</button>
+  <button (click)="addMarca()">Añadir Marca</button>
+
+</p>
+<p>{{mi_marca}}</p>
+
+<p>Compra las zapatillas de las mejores marcas</p>
+
+
+
+
+<ul>
+  <li *ngFor="let marca of marcas; let indice = index">
+      {{indice + ' - ' + marca}}
+    <button (click)="borrarMarca(indice)">Borrar</button>
+  </li>
+</ul>
+
+
+
+<p>las deportivas que tenemos disponiles son las siguientes</p>
+
+<ul>
+  <li *ngFor="let sandalia of zapatillas">
+
+
+    <span [ngStyle]="{
+          'text-decoration': !sandalia.stock ? 'line-through': 'none'
+    }">
+          {{sandalia.marca}} -
+      <strong [class.altoPrecio]="sandalia.precio >=150"
+              [ngClass]="{
+                          'fondoRojo': sandalia.precio >150,
+                          'subrayado': sandalia.marca == 'Nike'
+              }"
+      >
+
+        {{sandalia.precio}}$</strong>
+    </span>
+          <span *ngIf="sandalia.precio <150"
+            [style.background]="sandalia.precio <150 ? 'green' : 'transparent'"
+            [style.color]="sandalia.precio <150 ? 'white' : 'black'"
+            > !En oferta! </span>
+
+  </li>
+</ul>
+<p>El color de la mayoria de nuestras zapatillas es </p>
+<input type="text" [(ngModel)]="color">
+<ul [ngSwitch]="color">
+  <li *ngSwitchCase="'yellow'">
+    El color predominenate es el  <span [ngStyle]="{ 'background': color, 'padding' : '5px'}">amarillo</span>
+  </li>
+  <li *ngSwitchCase="'red'">
+    El color predominenate es el  <span [ngStyle]="{ 'background': color, 'padding' : '5px'}"> rojo</span>
+  </li>
+  <li *ngSwitchCase="'blue'">
+    El color predominenate es el  <span [ngStyle]="{ 'background': color, 'padding' : '5px'}"> azul</span>
+  </li>
+  <li *ngSwitchCase="'orange'">
+    El color predominenate es el  <span [ngStyle]="{ 'background': color, 'padding' : '5px'}">naranja</span>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
