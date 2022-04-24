@@ -1,4 +1,4 @@
-export class zapatilla {
+export class Zapatilla {
 
   /*
   Modo largo
