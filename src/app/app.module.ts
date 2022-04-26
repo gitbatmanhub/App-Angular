@@ -10,6 +10,7 @@ import { CursosComponent } from './cursos/cursos.component';
 import {FormsModule} from "@angular/forms";
 import { HomeComponent } from './home/home.component';
 import { ExternoComponent } from './externo/externo.component';
+import {CalculadoraPipe} from "./pipes/calculadora.pipe";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { ExternoComponent } from './externo/externo.component';
     CursosComponent,
     HomeComponent,
     ExternoComponent,
-
+    CalculadoraPipe
   ],
   imports: [
     BrowserModule,
