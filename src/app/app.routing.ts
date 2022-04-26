@@ -8,6 +8,7 @@ import {ZapatillasComponent} from "./zapatillas/zapatillas.component";
 import {VideojuegoComponent} from "./videojuego/videojuego.component";
 import {CursosComponent} from "./cursos/cursos.component";
 import {ExternoComponent} from "./externo/externo.component"
+import {ContactoComponent} from "./contacto/contacto.component";
 
 
 //Array de configuración de las rutas
@@ -19,6 +20,7 @@ const appRoutes: Routes=[
   {path: 'videojuego', component: VideojuegoComponent},
   {path: 'zapatillas', component: ZapatillasComponent},
   {path: 'externo', component: ExternoComponent},
+  {path: 'contacto', component: ContactoComponent},
   {path: '**', component: HomeComponent}
 
 ];
